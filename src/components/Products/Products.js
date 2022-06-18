@@ -8,14 +8,10 @@ const Products = () => {
 
   return (
     <section>
-      {products.map(products =><Product {...products[0]}{...products[1]} key={products.id}/>)}
-     
+      {products.map(product => <Product key={product.id} {...products[product.id - 1]} />)}
     </section>
-    
   );
-  
 };
-
 
 
 export default Products;
